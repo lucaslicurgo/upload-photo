@@ -3,10 +3,10 @@ import conexao from 'knex';
 export const knex = conexao({
         client: 'pg',
         connection: {
-            host: 'localhost',
-            port: 5432,
-            user: 'postgres',
-            password: '123456',
-            database: 'app_photos'   
+            host: process.env.DB_HOST,
+            port: Number(process.env.DB_PORT),
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            database: process.env.DB_NAME   
         }
 });

@@ -22,9 +22,7 @@ rotas.get('/fotos', async(req, res) => {
       return res.json(fotos);
 
   } catch (error) {
-
     return res.status(500).json({erro: 'Erro interno do servidor.'});
-
   }
 });
 

@@ -1,0 +1,6 @@
+CREATE DATABASE app_photos;
+
+CREATE TABLE fotos(
+    id SERIAL PRIMARY KEY,
+    fotos VARCHAR(255)
+);
