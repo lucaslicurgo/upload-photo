@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import './styles/Upload.css';
+import '../styles/Upload.css';
 
 function Upload() {
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
+  const[mensagem, setMensagem] = useState('');
 
   const enviarFoto = async () => {
     try {
@@ -16,14 +17,16 @@ function Upload() {
         }
       });
 
-      alert('Foto enviada com sucesso!');
+      setMensagem('Foto enviada com sucesso!');
     } catch (error) {
       console.error('Erro ao enviar foto:', error);
+      setMensagem('Erro ao enviar a foto. Tente novamente.')
     }
   };
 
   const handleFileChange = (event) => {
     setFotoSelecionada(event.target.files[0]);
+    setMensagem('');
   };
 
   return (
@@ -31,6 +34,7 @@ function Upload() {
       <h2>Enviar Nova Foto</h2>
       <input type="file" onChange={handleFileChange} />
       <button onClick={enviarFoto}>Enviar Foto</button>
+      {mensagem && <p>{mensagem}</p>}
     </div>
   );
 }

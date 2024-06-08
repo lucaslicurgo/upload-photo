@@ -1,11 +1,16 @@
 .app-principal {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  background-image: linear-gradient(to right, #9d5ed4, rgb(90,20,220));
+  padding: 20px;
+  min-height:100%;
+  color: white;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  position: center;
 }
 
 nav ul li {
@@ -15,13 +20,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  background-color: #5a14dc;
+  border-radius: 8px;
   transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: #ddd;
+  background-color: #4a11b8;
+  transform: scale(1s);
 }

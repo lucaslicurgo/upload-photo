@@ -1,9 +1,9 @@
 .upload {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-image: linear-gradient(to right, #9d5ed4, rgb(90,20,220));
+    border: none;
   }
   
   .upload h2 {
@@ -11,12 +11,15 @@
   }
   
   .upload input {
-    margin-right: 10px;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #45a049;
+    border-radius: 5px;
   }
   
   .upload button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    padding: 12px;
+    background-color: red;
     color: white;
     border: none;
     border-radius: 5px;
@@ -24,5 +27,11 @@
   }
   
   .upload button:hover {
-    background-color: #45a049;
+    background-color: rgb(148, 0, 0);
+  }
+
+  p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
   }
